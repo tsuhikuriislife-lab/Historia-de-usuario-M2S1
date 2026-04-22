@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#contenedor-mascotas {
+    display: flex;
+    gap: 10px;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mascota {
+    height: 40vh;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.mascota.foto-mascota {
+    height: 100%;
+    width: 100%;
+}

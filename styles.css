@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tier3:#1B3079;
+    --tier2:#4D7C8A;
+    --tier1:#7F9C96;
+    --bodies:#8FAD88;
+    --headers:#CBDF90;
+}
+
+body {
+    background-color: var(--bodies)
+}
+
+
+
+#header {
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--headers);
+}
+
+.navegador {
+    flex-grow: 1;
+}
+
+.contenedor-links {
+    display:flex;
+    justify-content: space-around;
+}
+
+.contenedor-lenguajes {
+    display:flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.lenguaje {
+    background-color: var(--tier3);
+    color: white;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#proyectos {
+    display:flex;
+    gap:5px;
+    border-radius:5px;
+    justify-content: center;
+    height: 20vw;
+}
+
+.header-tarjeta {
+    flex-grow: 1;
+    background-color: var(--tier2);
+    border-radius: 5px;
+    overflow-y: scroll;
+    width: 100%;
+}
+.proyecto {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--tier1);
+    border-radius:5px;
+    width: 15%;
+    padding: 10px;
+    height: 100%;
+}
+
+.body-tarjeta {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+    background-color: var(--tier2);
+    border-radius: 5px;
+}
+
+.boton-tarjeta {
+    background-color:var(--tier3);
+    border-radius: 5px;
+    border-style: none;
+    padding: 3px
+}
