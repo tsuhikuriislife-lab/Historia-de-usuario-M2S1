@@ -3,22 +3,87 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #contenedor-mascotas {
     display: flex;
     gap: 10px;
-    height: 100vh;
+    height: 90vh;
+    padding: 5px;
     align-items: center;
     justify-content: space-evenly;
+    overflow-x: scroll;
+    align-self: flex-start;
 }
 
 .mascota {
-    height: 40vh;
+    height: 70vh;
+    width: 30vw;
     background-color: gray;
     border-radius: 5px;
-    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.mascota.foto-mascota {
-    height: 100%;
+#felix {
+    background-image: url(images/felix.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+#tigre {
+    background-image: url(images/tigre.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+#malo {
+    background-image: url(images/malo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.nombre,
+.descripcion {
+    position: absolute;
+    left: 0;
     width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    transition: transform 0.4s ease;
+    text-align: center;
+}
+
+.nombre {
+    height: 20%;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.descripcion {
+    height: 30%;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.mascota:hover .nombre, .mascota:hover .descripcion {
+    transform: translateY(0)
+}
+
+#volver-boton {
+    width: 95vw;
+    height: 5vh;
 }
